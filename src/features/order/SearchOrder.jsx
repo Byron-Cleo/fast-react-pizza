@@ -21,6 +21,7 @@ function SearchOrder() {
         placeholder="Enter your order ID"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        className=""
       />
     </form>
   );

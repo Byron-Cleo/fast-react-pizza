@@ -1,5 +1,5 @@
 function Username() {
-  return <div className="text-sm font-semibold">Byron Ochara</div>;
+  return <div className="hidden text-sm font-semibold md:block">Byron</div>;
 }
 
 export default Username;
