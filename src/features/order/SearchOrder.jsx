@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function SearchOrder() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     //this is to prevent the page from reloading and navigating to another link or page
     e.preventDefault();
-    // Search logic 
-    if(!query) return;
+    // Search logic
+    if (!query) return;
     navigate(`/order/${query}`);
-    setQuery(""); 
+    setQuery('');
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Enter your order ID"
+        placeholder="Search Order #"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className=""
+        className="px-4 py-2 text-sm transition-all duration-300 bg-yellow-100 rounded-full w-28 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-500 focus:ring-opacity-50 sm:w-64 sm:focus:w-72"
       />
     </form>
   );
